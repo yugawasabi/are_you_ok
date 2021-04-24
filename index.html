@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="jpn">
+<head>
+    <meta charset="UTF-8">
+    <title>体調どんな感じですか？</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+</head>
+<body>
+    <div class="header fade">
+        <p class="title">
+            今、体調どんな感じ？<br><span>あなたのことが心配です...</span>
+        </p>
+    </div>
+    <div class="main fade">
+        <img src="img/名称未設定-4.png" alt="風邪ひき男">
+        <p class="main_discription">当てはまるものを下から選んでね</p>
+        <ul class="answers">
+            <li class="button_area" onclick="sendImNotOk"><p class="answer">かなりやばい...</p></li>
+            <li class="button_area" onclick="sendImGettingBetter"><p class="answer">良くなってきてる！</p></li>
+            <li class="button_area" onclick="sendImSaikoudaze"><p class="answer">完全復活！</p></li>
+        </ul>
+    </div>
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <script>
+        liff
+            .init({
+                liffId: 1655772538-da6XrL1G
+
+            })
+            .then(() => {})
+        function sendImNotOk () {
+            liff.sendMessages([{
+                'type': 'text',
+                'text': "かなりやばいっす...。"
+            }]).then(function() {
+                window.alert('送信完了！お大事に。');
+            })
+        }
+        function sendImGettingBetter () {
+            liff.sendMessages([{
+                'type': 'text',
+                'text': "少し良くなってきた！"
+            }]).then(function() {
+                window.alert('送信完了！もう少し！ゆっくり休んで！');
+            })
+        }
+        function sendImSaikoudaze () {
+            liff.sendMessages([{
+                'type': 'text',
+                'text': "もう大丈夫！どこか遊びに行こう！"
+            }]).then(function() {
+                window.alert('送信完了！完全復活おめでとう！');
+            })
+        }
+    </script>
+</body>
+</html>

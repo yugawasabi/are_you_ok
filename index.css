@@ -1,0 +1,53 @@
+body {
+    font-family: 'M PLUS 1p', sans-serif;
+    background-color: #8C9CF5;
+    text-align: center;
+}
+
+.header {
+    padding-top: 50px;
+    text-align: center;
+    color: #ffffff;
+}
+.fade {
+    animation: fadeIn 0.2s ease 0.3s 1 normal;
+}
+@keyframes fadeIn { /*animetion-nameで設定した値を書く*/
+
+    0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+
+    100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+
+}
+.title {
+    font-size: 70px;
+}
+.title span {
+    font-size: 50px;
+}
+.main {
+    padding-top: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+.main_discription {
+    font-size: 40px;
+    color: #ffffff;
+}
+.answers {
+    text-align: center;
+    list-style: none;
+}
+.button_area {
+    background-color: #ffffff;
+    height: 130px;
+    width: 880px;
+    margin: 10px 5px 10px 5px;
+    box-shadow: 1px 1px 10px 1px #434343;
+    border-radius: 15px;
+}
+.answer {
+    color: #000000;
+    font-size: 50px;
+    padding-top: 30px;
+}
